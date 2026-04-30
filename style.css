@@ -1,0 +1,194 @@
+/* ===== THEME ===== */
+:root {
+    --bg-color: #F8F9FD;
+    --card-bg: #FFFFFF;
+    --text-main: #2D3436;
+    --accent-purple: #706FD3;
+}
+
+body.dark-theme {
+    --bg-color: #1E1E2C;
+    --card-bg: #2D2D44;
+    --text-main: #F1F1F1;
+    --accent-purple: #9D9DFF;
+    border-radius: 5px;
+}
+
+/* ===== BODY ===== */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: var(--bg-color);
+    color: var(--text-main);
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* ===== HEADER ===== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: var(--card-bg);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.toogle{
+    display: flex;
+    gap: 10px;
+}
+.logo {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* NAV biar ke kanan */
+nav {
+    margin-left: auto;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-main);
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: var(--accent-purple);
+}
+
+/* ===== HERO ===== */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px 50px;
+    margin-bottom: 0;
+}
+
+.hero div {
+    margin-top: 20px; /* lebih rapi */
+}
+
+.hero img {
+    width: 500px;
+    border-radius: 16px;
+    max-height: 320px;
+    object-fit: cover;
+}
+.hero h1 {
+    font-size: 36px;
+    margin-top: 0;
+}
+
+.highlight {
+    color: var(--accent-purple);
+}
+
+/* ===== BUTTON ===== */
+.btn {
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background: var(--accent-purple);
+    color: white;
+}
+
+.btn-outline {
+    border: 1px solid var(--accent-purple);
+    color: var(--accent-purple);
+    background: transparent;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+/* ===== MENU ===== */
+.menu {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 15px;
+    padding: 10px, 20px;
+}
+
+.card {
+    background: var(--card-bg);
+    padding: 20px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* ===== FORM ===== */
+.form-container {
+    background: var(--card-bg);
+    margin: 40px 50px;
+    padding: 30px;
+    border-radius: 12px;
+}
+
+/* LABEL FIX (tadi salah .label) */
+label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    transition: 0.2s;
+}
+
+/* efek focus biar estetik */
+input:focus, textarea:focus, select:focus {
+    border-color: var(--accent-purple);
+    outline: none;
+}
+
+textarea {
+    height: 120px;
+}
+
+/* FIX name textarea */
+textarea[name="content"] {
+    margin-top: 15px;
+}
+
+/* KATEGORI & MOOD */
+.form-row {
+    display: flex;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.form-row div {
+    flex: 1;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    color: var(--text-main);
+}
+
+
